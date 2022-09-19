@@ -15,13 +15,13 @@ export const Banner = () => {
           Math.floor(Math.random() * request.data.results.length - 1)
         ]
       );
-
+      
       return request;
     };
-
+    
     fetchData();
   }, []);
-
+  
   console.log(movie);
 
   {
@@ -49,10 +49,7 @@ export const Banner = () => {
           <button className="banner__button">My List</button>
         </div>
         <h1 className="banner__description">
-          {truncate(
-            `  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, magnam ducimus nulla at minus similique laboriosam deleniti distinctio, dolores itaque quisquam unde quibusdam dignissimos quis, corporis soluta exercitationem facere tempore recusandae.  Voluptatibus soluta error dolorum minima, blanditiis voluptates enim aspernatur temporibus facere facilis fuga laboriosam sequi adipisci nesciunt et distinctio laudantium fugiat doloremque minus omnis ab. Sapiente omnis vitae deserunt,`,
-            150
-          )}
+          {truncate(movie?.overview, 200)}
         </h1>
       </div>
 
