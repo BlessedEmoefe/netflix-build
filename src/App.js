@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
-import HomeScreen from "./features/HomeScreen/HomeScreen";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./infrastructure/Router/Navigation";
 
 function App() {
   return (
     <div className="app">
-      <HomeScreen />
+      <RouterProvider router={router} />
     </div>
   );
 }
