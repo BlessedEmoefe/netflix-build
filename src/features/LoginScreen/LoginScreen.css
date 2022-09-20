@@ -39,6 +39,8 @@
     top: 30%;
     color:#fff;
     padding: 20px;
+    margin:0 auto;
+    text-align: center;
 }
 
 .loginScreen__body>h1{

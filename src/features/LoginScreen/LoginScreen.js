@@ -20,6 +20,7 @@ const LoginScreen = () => {
       <div className="loginScreen__body">
         <>
         <h1>Unlimited films, Tv programmes and more.</h1>
+        <h2>Watch anywhere.cancek=l anytime</h2>
         </>
       </div>
     </div>
