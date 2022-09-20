@@ -32,3 +32,16 @@
   border: none;
   cursor: pointer;
 }
+
+.loginScreen__body{
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    color:#fff;
+    padding: 20px;
+}
+
+.loginScreen__body>h1{
+font-size: 3.13rem;
+margin-bottom: 20px;
+}
