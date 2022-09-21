@@ -1,15 +1,14 @@
-
-
 .loginScreen {
   position: relative;
   height: 100%;
 }
 
-.loginScreen__background{
-    height:100vh;
-    background-size: cover;
-    background-repeat: round;
-    object-fit: contain;
+.loginScreen__background {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: round;
+  object-fit: contain;
+  position: relative;
 }
 
 .loginScreen__logo {
@@ -33,17 +32,54 @@
   cursor: pointer;
 }
 
-.loginScreen__body{
-    z-index: 1;
-    position: absolute;
-    top: 30%;
-    color:#fff;
-    padding: 20px;
-    margin:0 auto;
-    text-align: center;
+.loginScreen__body {
+  z-index: 1;
+  position: absolute;
+  top: 30%;
+  margin:0 auto;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  background-color: blue;
 }
 
-.loginScreen__body>h1{
-font-size: 3.13rem;
-margin-bottom: 20px;
+.loginScreen__body > h1 {
+  font-size: 3.13rem;
+  margin-bottom: 20px;
+}
+
+.loginScreen__body > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.loginScreen__body > h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.loginScreen__input {
+  margin: 20px;
+}
+.loginScreen__input > form{
+    background:pink;
+}
+.loginScreen__input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+}
+
+.loginScreen__getStarted {
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
