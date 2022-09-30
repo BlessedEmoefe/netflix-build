@@ -14,6 +14,7 @@
 .loginScreen__logo {
   position: fixed;
   left: 0;
+  top: 15px;
   width: 150px;
   object-fit: contain;
   padding-left: 20px;
@@ -22,7 +23,7 @@
 .loginScreen__button {
   position: fixed;
   right: 20px;
-  top: 4px;
+  top: 20px;
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
@@ -36,11 +37,10 @@
   z-index: 1;
   position: absolute;
   top: 30%;
-  margin:0 auto;
   color: #fff;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
-  background-color: blue;
+  width:100%;
 }
 
 .loginScreen__body > h1 {
@@ -62,8 +62,8 @@
 .loginScreen__input {
   margin: 20px;
 }
-.loginScreen__input > form{
-    background:pink;
+.loginScreen__input > form {
+  /* background:pink; */
 }
 .loginScreen__input > form > input {
   padding: 10px;
