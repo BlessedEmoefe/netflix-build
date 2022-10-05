@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LoginScreen.css";
 import LogoImage from "../../assets/images/logo.png";
 import LoginScreenBg from "../../assets/images/loginScreen-bg.jpg";
+import SignUpScreen from "../SignUpScreen/SignUpScreen";
 
 const LoginScreen = () => {
+  const [signIn, setSignIn] = useState(true);
+
   return (
     <div className="loginScreen">
       <div
@@ -14,24 +17,36 @@ const LoginScreen = () => {
       >
         <img className="loginScreen__logo" src={LogoImage} alt="logo" />
 
-        <button className="loginScreen__button">Sign In</button>
+        <button onClick={() => setSignIn(true)} className="loginScreen__button">
+          Sign In
+        </button>
       </div>
 
       <div className="loginScreen__body">
-        <>
-        <h1>Unlimited movies, Tv shows and more.</h1>
-        <h2>Watch anywhere. Cancel anytime</h2>
-        <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+        {signIn ? (
+          <SignUpScreen />
+        ) : (
+          <>
+            <h1>Unlimited movies, Tv shows and more.</h1>
+            <h2>Watch anywhere. Cancel anytime</h2>
+            <h3>
+              Ready to watch? Enter your email to create or restart your
+              membership.
+            </h3>
 
-        <div className="loginScreen__input">
-            <form>
+            <div className="loginScreen__input">
+              <form>
                 <input type="email" placeholder="Email Address" />
-                <button className="loginScreen__getStarted">
-                    GET STARTED
+                <button
+                  onClick={() => setSignIn(true)}
+                  className="loginScreen__getStarted"
+                >
+                  GET STARTED
                 </button>
-            </form>
-        </div>
-        </>
+              </form>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
