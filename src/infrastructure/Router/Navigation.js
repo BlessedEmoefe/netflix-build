@@ -19,43 +19,34 @@ import LoginScreen from "../../features/LoginScreen/LoginScreen";
     const user = useSelector(selectUser)
     return (
       <Router>
-        <Routes>
-          {!user ? (
+        {!user ? (
+          <Routes>
             <Route element={<LoginScreen />} path="/" />
-          ) : (
+            <Route
+              path="*"
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>There's No Page like this!!!</p>
+                </main>
+              }
+            />
+          </Routes>
+        ) : (
+          <Routes>
             <Route exact element={<HomeScreen />} path="/" />
-          )}
-
-          {/* <Route
-            path="*"
-            element={
-              <main style={{ padding: "1rem" }}>
-                <p>There's No Page like this!!!</p>
-              </main>
-            }
-          /> */}
-        </Routes>
+            <Route exact element={<ProfileScreen />} path="/profile" />
+            <Route
+              path="*"
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>There's No Page like this!!!</p>
+                </main>
+              }
+            />
+          </Routes>
+        )}
       </Router>
     );
   };
-
-
-// export const Router = createBrowserRouter(
-//  user = useSelector(selectUser),
-
-//    !user
-//     ? [
-//         {
-//           path: "/",
-//           element: <LoginScreen />,
-//         },
-//       ]
-//     : [
-//         {
-//           path: "/",
-//           element: <HomeScreen />,
-//         },
-//       ]
-// );
 
 
