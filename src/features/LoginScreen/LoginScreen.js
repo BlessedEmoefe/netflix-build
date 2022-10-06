@@ -4,8 +4,9 @@ import LogoImage from "../../assets/images/logo.png";
 import LoginScreenBg from "../../assets/images/loginScreen-bg.jpg";
 import SignUpScreen from "../SignUpScreen/SignUpScreen";
 
+
 const LoginScreen = () => {
-  const [signIn, setSignIn] = useState(true);
+  const [signIn, setSignIn] = useState(false);
 
   return (
     <div className="loginScreen">
